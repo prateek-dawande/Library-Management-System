@@ -1,0 +1,204 @@
+Testing the APIs
+
+Prerequisites
+
+Database Setup: Ensure MySQL is running and the lms_db database is created.
+
+Running the Application: Start the application by running the LmsApplication class.
+
+
+Tools for Testing
+
+Use Postman, cURL, or Swagger (if Swagger is added later) to interact with the APIs.
+
+
+Example API Test Scenarios
+
+1. Author APIs
+
+Save an Author
+
+Endpoint: POST /api/authors
+
+Request Body:
+
+{
+  "name": "J.K. Rowling"
+}
+
+
+Get All Authors
+
+Endpoint: GET /api/authors
+
+
+Get Author by ID
+
+Endpoint: GET /api/authors/{id}
+
+
+Update Author
+
+Endpoint: PUT /api/authors/{id}
+
+Request Body:
+
+{
+  "name": "Updated Name"
+}
+
+
+Delete Author
+
+Endpoint: DELETE /api/authors/{id}
+
+
+
+2. Book APIs
+
+Save a Book
+
+Endpoint: POST /api/books
+
+Request Body:
+
+{
+  "title": "Harry Potter",
+  "genre": "Fantasy",
+  "author": {
+    "id": 1
+  }
+}
+
+
+Get All Books
+
+Endpoint: GET /api/books
+
+
+Get Book by ID
+
+Endpoint: GET /api/books/{id}
+
+
+Get Books by Genre
+
+Endpoint: GET /api/books/genre/{genre}
+
+
+Update Book
+
+Endpoint: PUT /api/books/{id}
+
+Request Body:
+
+{
+  "title": "Updated Title",
+  "genre": "Updated Genre",
+  "author": {
+    "id": 1
+  }
+}
+
+
+Delete Book
+
+Endpoint: DELETE /api/books/{id}
+
+
+
+3. Member APIs
+
+Save a Member
+
+Endpoint: POST /api/members
+
+Request Body:
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "1234567890"
+}
+
+
+Get All Members
+
+Endpoint: GET /api/members
+
+
+Get Member by ID
+
+Endpoint: GET /api/members/{id}
+
+
+Update Member
+
+Endpoint: PUT /api/members/{id}
+
+Request Body:
+
+{
+  "name": "Updated Name",
+  "email": "updated@example.com",
+  "phone": "0987654321"
+}
+
+
+Delete Member
+
+Endpoint: DELETE /api/members/{id}
+
+
+
+4. Loan APIs
+
+Save a Loan
+
+Endpoint: POST /api/loans
+
+Request Body:
+
+{
+  "loanDate": "2025-01-01",
+  "returnDate": "2025-01-15",
+  "member": {
+    "id": 1
+  },
+  "book": {
+    "id": 1
+  }
+}
+
+
+Get All Loans
+
+Endpoint: GET /api/loans
+
+
+Get Loan by ID
+
+Endpoint: GET /api/loans/{id}
+
+
+Update Loan
+
+Endpoint: PUT /api/loans/{id}
+
+Request Body:
+
+{
+  "loanDate": "2025-02-01",
+  "returnDate": "2025-02-15",
+  "member": {
+    "id": 1
+  },
+  "book": {
+    "id": 1
+  }
+}
+
+
+Delete Loan
+
+Endpoint: DELETE /api/loans/{id}
